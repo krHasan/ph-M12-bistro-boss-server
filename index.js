@@ -72,7 +72,7 @@ async function run() {
             res.send(result);
         });
 
-        app.get('/user/admin/:email', verifyToken, async (req, res) => {
+        app.get('/users/admin/:email', verifyToken, async (req, res) => {
             const email = req.params.email;
 
             if (email !== req.decoded.email) {
